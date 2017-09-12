@@ -15,7 +15,7 @@ import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(BASE_DIR, "app"))
+sys.path.insert(0, os.path.join(BASE_DIR, "apps"))
 sys.path.insert(0, os.path.join(BASE_DIR, "extra_apps"))
 
 # Quick-start development settings - unsuitable for production
@@ -32,10 +32,6 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-AUTHENTICATION_BACKENDS = (
-
-)
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,6 +42,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'captcha',
     'pure_pagination',
+    'xadmin',
 ]
 
 MIDDLEWARE_CLASSES = [

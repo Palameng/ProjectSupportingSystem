@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'captcha',
     'pure_pagination',
     'xadmin',
+    'users',
 ]
+AUTH_USER_MODEL = "users.UserProfile"
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',

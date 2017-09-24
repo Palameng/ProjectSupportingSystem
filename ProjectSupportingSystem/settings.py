@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'pure_pagination',
     'xadmin',
     'users',
+    'projects',
 ]
 AUTH_USER_MODEL = "users.UserProfile"
 

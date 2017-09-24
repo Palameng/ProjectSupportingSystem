@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    {% block title_text %}<title>Gentelella Alela! | </title>{% endblock %}
 
     <!-- Bootstrap -->
     <link href="/static/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +17,7 @@
     <link href="/static/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="/static/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-	
+
     <!-- bootstrap-progressbar -->
     <link href="/static/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
@@ -150,7 +150,7 @@
                         <li><a href="#level1_2">Level One</a>
                         </li>
                     </ul>
-                  </li>                  
+                  </li>
                   <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> 我的邮件 <span class="label label-success pull-right">Coming Soon</span></a></li>
                 </ul>
               </div>
@@ -273,7 +273,7 @@
           </div>
         </div>
         <!-- /top navigation -->
-
+        {% block right_col %}
         <!-- page content -->
         <div class="right_col" role="main">
           <!-- top tiles -->
@@ -851,7 +851,7 @@
                   </div>
                 </div>
                 <!-- End to do list -->
-                
+
                 <!-- start of weather widget -->
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <div class="x_panel">
@@ -964,7 +964,7 @@
           </div>
         </div>
         <!-- /page content -->
-
+        {% endblock %}
         <!-- footer content -->
         <footer>
           <div class="pull-right">
@@ -976,6 +976,7 @@
       </div>
     </div>
 
+    {% block jquery_file %}
     <!-- jQuery -->
     <script src="/static/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -1016,6 +1017,6 @@
 
     <!-- Custom Theme Scripts -->
     <script src="/static/build/js/custom.min.js"></script>
-	
+    {% endblock %}
   </body>
 </html>

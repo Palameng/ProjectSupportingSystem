@@ -8,7 +8,7 @@ from projects.models import Projects
 
 class IndexView(View):
     def get(self, request):
-        user = UserProfile.objects.get(username='mengyuan')
+        user = UserProfile.objects.get(username='admin')
 
         sum_of_project = Projects.objects.all().count()
 

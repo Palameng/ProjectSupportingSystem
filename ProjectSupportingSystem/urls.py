@@ -16,10 +16,16 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from users.views import IndexView
+from django.views.static import serve
+from ProjectSupportingSystem.settings import MEDIA_ROOT
 import xadmin
 
 urlpatterns = [
     url('^$', IndexView.as_view(), name="index"),
     url(r'^xadmin/', xadmin.site.urls),
     url(r'^project/', include('projects.urls', namespace="project")),
+
+    # 配置上传文件的访问处理函数
+    url(r'^media/(?P<path>.*)', serve, {"document_root": MEDIA_ROOT}),
+
 ]

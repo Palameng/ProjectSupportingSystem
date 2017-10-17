@@ -32,17 +32,50 @@ class Projects(models.Model):
         verbose_name = "项目信息"
         verbose_name_plural = verbose_name
 
-    def userofmission(self):
-        return self.projectfirstcategory_set.all()
-
-    def userofproject(self):
-        return self.projectusers_set.all()
-
     def __str__(self):
         return self.name
 
 
+class Stages(models.Model):
+    """
+    阶段
+    """
+    name = models.CharField(max_length=30, null=True, blank=True, verbose_name="阶段名")
+    project = models.ForeignKey(Projects, null=True, blank=True, verbose_name="项目")
+    add_time = models.DateTimeField(default=datetime.now, verbose_name=u"添加时间")
+
+    class Meta:
+        verbose_name = "阶段"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return str(self.project.name + ':' + self.name)
+
+    def get_all_missions(self):
+        return self.missions_set.all()
+
+
+class Missions(models.Model):
+    """
+    任务
+    """
+    stage = models.ForeignKey(Stages, null=True, blank=True, verbose_name="所属阶段")
+    name = models.CharField(max_length=30, null=True, blank=True, verbose_name="任务名")
+    progress = models.IntegerField(default=0, verbose_name="任务进度")
+    add_time = models.DateTimeField(default=datetime.now, verbose_name=u"添加时间")
+
+    class Meta:
+        verbose_name = "子任务"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return str(self.name)
+
+
 class ProjectUsers(models.Model):
+    """
+    项目成员关联表
+    """
     user = models.ForeignKey(UserProfile, null=True, blank=True, verbose_name="成员")
     project = models.ForeignKey(Projects, null=True, blank=True, verbose_name="项目")
     add_time = models.DateTimeField(default=datetime.now, verbose_name=u"添加时间")
@@ -55,22 +88,17 @@ class ProjectUsers(models.Model):
         return str(self.id)
 
 
-class ProjectFirstCategory(models.Model):
+class MissionUsers(models.Model):
     """
-    项目子任务
+    任务成员关联表
     """
-    project = models.ForeignKey(Projects, null=True, blank=True, verbose_name="父项目")
-    user = models.ForeignKey(UserProfile, null=True, blank=True, verbose_name="负责人")
-    name = models.CharField(max_length=30, null=True, blank=True, verbose_name="子任务名")
-    progress = models.IntegerField(default=0, verbose_name="进度")
+    user = models.ForeignKey(UserProfile, null=True, blank=True, verbose_name="成员")
+    mission = models.ForeignKey(Missions, null=True, blank=True, verbose_name="任务")
     add_time = models.DateTimeField(default=datetime.now, verbose_name=u"添加时间")
 
     class Meta:
-        verbose_name = "子任务"
+        verbose_name = "任务成员关联表"
         verbose_name_plural = verbose_name
 
-    # def get_all_users(self, mission_id):
-    #     return self.objects.filter(project__id=mission_id)
-
     def __str__(self):
-        return str(self.name)
+        return str(self.id)

@@ -82,9 +82,9 @@
                           </td>
                           <td class="project_progress">
                             <div class="progress progress_sm">
-                              <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="57"></div>
+                              <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{ project.progress }}"></div>
                             </div>
-                            <small>57% Complete</small>
+                            <small>{{ project.progress }}% Complete</small>
                           </td>
                           <td>
                             <button type="button" class="btn btn-success btn-xs">{{ project.get_status_display }}</button>

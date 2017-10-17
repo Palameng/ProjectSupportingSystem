@@ -1,7 +1,7 @@
 # _*_ encoding:utf-8 _*
 from django.shortcuts import render
 from django.views.generic import View
-from .models import Projects, ProjectUsers, ProjectFirstCategory
+from .models import Projects, ProjectUsers, Missions, Stages
 # Create your views here.
 
 
@@ -16,6 +16,9 @@ class ListView(View):
 
 
 class AddView(View):
+    """
+    增加项目
+    """
     def get(self, request):
         return render(request, 'projects/project_add.html', {
 
@@ -23,9 +26,12 @@ class AddView(View):
 
 
 class DetailView(View):
+    """
+    获取项目详情
+    """
     def get(self, request, project_id):
-        all_missions = ProjectFirstCategory.objects.filter(project__id=int(project_id))
+        all_stages = Stages.objects.filter(project__id=int(project_id))
 
         return render(request, 'projects/project_detail.html', {
-            "all_missions": all_missions,
+            "all_stages": all_stages,
         })

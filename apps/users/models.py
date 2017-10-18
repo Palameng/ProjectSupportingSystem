@@ -8,11 +8,10 @@ from datetime import datetime
 
 class UserProfile(AbstractUser):
     work_number = models.CharField(max_length=10, verbose_name=u"工号", default=u"")
-    # birthday = models.DateField(verbose_name=u"生日", null=True, blank=True)
     sex = models.CharField(max_length=6, choices=(("male", u"男"), ("female", u"女")), default="female")
-    # address = models.CharField(max_length=100, default=u"")
     mobile = models.CharField(max_length=11, null=True, blank=True)
     image = models.ImageField(upload_to="user/%Y/%m", verbose_name=u"头像")
+    is_project_leader = models.BooleanField(default=False, verbose_name="项目负责标记")
 
     class Meta:
         verbose_name = "用户信息"

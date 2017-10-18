@@ -31,7 +31,8 @@ class DetailView(View):
     """
     def get(self, request, project_id):
         all_stages = Stages.objects.filter(project__id=int(project_id))
-
+        current_project = Projects.objects.get(id=int(project_id))
         return render(request, 'projects/project_detail.html', {
             "all_stages": all_stages,
+            "current_project": current_project,
         })

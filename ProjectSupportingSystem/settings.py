@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'xadmin',
     'users',
     'projects',
+    'weekreports',
 ]
 AUTH_USER_MODEL = "users.UserProfile"
 

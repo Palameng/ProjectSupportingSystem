@@ -62,6 +62,7 @@ class Missions(models.Model):
     stage = models.ForeignKey(Stages, null=True, blank=True, verbose_name="所属阶段")
     name = models.CharField(max_length=30, null=True, blank=True, verbose_name="任务名")
     progress = models.IntegerField(default=0, verbose_name="任务进度")
+    content = models.TextField(verbose_name="任务详细", null=True, blank=True)
     add_time = models.DateTimeField(default=datetime.now, verbose_name=u"添加时间")
 
     class Meta:
@@ -69,7 +70,7 @@ class Missions(models.Model):
         verbose_name_plural = verbose_name
 
     def __str__(self):
-        return str(self.name)
+        return str(self.stage.project.name + ':' + self.name)
 
 
 class ProjectUsers(models.Model):

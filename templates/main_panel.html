@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block custom_title %}
+    <title>主面板</title>
+{% endblock %}
+
+{% block custom_content %}
+    <div class="templatemo-content">
+          <ol class="breadcrumb">
+            <li><a href="{% url 'index' %}">首页</a></li>
+            <li class="active">我的项目</li>
+          </ol>
+          <div class="row margin-bottom-30">
+            <div class="col-md-12">
+              <ul class="nav nav-pills">
+                <li class="active"><a href="#">当前项目<span class="badge">42</span></a></li>
+                <li class="color1"><a href="#">完成项目<span class="badge">107</span></a></li>
+                <li class="color2"><a href="#">周报<span class="badge">3</span></a></li>
+              </ul>
+            </div>
+          </div>
+                    <div class="row">
+            <div class="col-md-12">
+              <div class="btn-group pull-right" id="templatemo_sort_btn">
+                <button type="button" class="btn btn-default">Sort by</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">First Name</a></li>
+                  <li><a href="#">Last Name</a></li>
+                  <li><a href="#">Username</a></li>
+                </ul>
+              </div>
+              <div class="table-responsive">
+                <h4 class="margin-bottom-15">最近周报</h4>
+                <table class="table table-striped table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Username</th>
+                      <th>Email</th>
+                      <th>Edit</th>
+                      <th>Action</th>
+                      <th>Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>John</td>
+                      <td>Smith</td>
+                      <td>@js</td>
+                      <td>a@company.com</td>
+                      <td><a href="#" class="btn btn-default">Edit</a></td>
+                      <td>
+                        <!-- Split button -->
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">Action</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Bootstrap</a></li>
+                            <li><a href="#">Font Awesome</a></li>
+                            <li><a href="#">jQuery</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td><a href="#" class="btn btn-link">Delete</a></td>
+                    </tr>
+                    <tr class="success">
+                      <td>2</td>
+                      <td>Bill</td>
+                      <td>Digital</td>
+                      <td>@bd</td>
+                      <td>bd@company.com</td>
+                      <td><a href="#" class="btn btn-default">Edit</a></td>
+                      <td>
+                        <!-- Split button -->
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">Action</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Bootstrap</a></li>
+                            <li><a href="#">Font Awesome</a></li>
+                            <li><a href="#">jQuery</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td><a href="#" class="btn btn-link">Delete</a></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Marry</td>
+                      <td>James</td>
+                      <td>@mj</td>
+                      <td>mj@company.com</td>
+                      <td><a href="#" class="btn btn-default">Edit</a></td>
+                      <td>
+                        <!-- Split button -->
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">Action</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Bootstrap</a></li>
+                            <li><a href="#">Font Awesome</a></li>
+                            <li><a href="#">jQuery</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td><a href="#" class="btn btn-link">Delete</a></td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Carry</td>
+                      <td>Land</td>
+                      <td>@cl</td>
+                      <td>cl@company.com</td>
+                      <td><a href="#" class="btn btn-default">Edit</a></td>
+                      <td>
+                        <!-- Split button -->
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">Action</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Bootstrap</a></li>
+                            <li><a href="#">Font Awesome</a></li>
+                            <li><a href="#">jQuery</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td><a href="#" class="btn btn-link">Delete</a></td>
+                    </tr>
+                    <tr class="success">
+                      <td>5</td>
+                      <td>New</td>
+                      <td>Caroline</td>
+                      <td>@nc</td>
+                      <td>nc@company.com</td>
+                      <td><a href="#" class="btn btn-default">Edit</a></td>
+                      <td>
+                        <!-- Split button -->
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">Action</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Bootstrap</a></li>
+                            <li><a href="#">Font Awesome</a></li>
+                            <li><a href="#">jQuery</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td><a href="#" class="btn btn-link">Delete</a></td>
+                    </tr>
+                    <tr class="danger">
+                      <td>6</td>
+                      <td>Martin</td>
+                      <td>East</td>
+                      <td>@me</td>
+                      <td>me@company.com</td>
+                      <td><a href="#" class="btn btn-default">Edit</a></td>
+                      <td>
+                        <!-- Split button -->
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">Action</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Bootstrap</a></li>
+                            <li><a href="#">Font Awesome</a></li>
+                            <li><a href="#">jQuery</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td><a href="#" class="btn btn-link">Delete</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-responsive">
+                <h4 class="margin-bottom-15">最近项目</h4>
+                <table class="table table-striped table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>项目id</th>
+                      <th>项目</th>
+                      <th>类型</th>
+                      <th>状态</th>
+                      <th>当前版本</th>
+                      <th>进度</th>
+                      <th>创建时间</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for list in project_user_list %}
+                    <tr>
+                        <td>{{ list.project.id }}</td>
+                        <td>{{ list.project.name }}</td>
+                        <td>{{ list.project.get_field_display }}</td>
+                        <td>{{ list.project.get_status_display }}</td>
+                        <td>{{ list.project.version }}</td>
+                        <td>{{ list.project.progress }}%</td>
+                        <td>{{ list.project.add_time }}</td>
+                        <td>
+                        <!-- Split button -->
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">操作</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Bootstrap</a></li>
+                            <li><a href="#">Font Awesome</a></li>
+                            <li><a href="#">jQuery</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+{#              <ul class="pagination pull-right">#}
+{#                <li class="disabled"><a href="#">&laquo;</a></li>#}
+{#                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>#}
+{#                <li><a href="#">2 <span class="sr-only">(current)</span></a></li>#}
+{#                <li><a href="#">3 <span class="sr-only">(current)</span></a></li>#}
+{#                <li><a href="#">4 <span class="sr-only">(current)</span></a></li>#}
+{#                <li><a href="#">5 <span class="sr-only">(current)</span></a></li>#}
+{#                <li><a href="#">&raquo;</a></li>#}
+{#              </ul>#}
+            </div>
+          </div>
+    </div>
+{% endblock %}

@@ -2,6 +2,8 @@
 from django.shortcuts import render
 from django.views.generic import View
 from .models import Projects, ProjectUsers, Missions, Stages, MissionUsers
+from users.models import UserProfile
+
 # Create your views here.
 
 
@@ -20,8 +22,11 @@ class AddView(View):
     增加项目
     """
     def get(self, request):
-        return render(request, 'projects/project_add.html', {
 
+        all_users = UserProfile.objects.all()
+
+        return render(request, 'projects/create_project.html', {
+            "all_users": all_users,
         })
 
 

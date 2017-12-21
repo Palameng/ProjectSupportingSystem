@@ -24,7 +24,7 @@ urlpatterns = [
     url('^$', IndexView.as_view(), name="index"),
     url(r'^xadmin/', xadmin.site.urls),
     url(r'^project/', include('projects.urls', namespace="project")),
-
+    url(r'^weekreport/', include('weekreports.urls', namespace="weekreport")),
     # 配置上传文件的访问处理函数
     url(r'^media/(?P<path>.*)', serve, {"document_root": MEDIA_ROOT}),
 

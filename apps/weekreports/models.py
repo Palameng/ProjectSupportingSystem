@@ -23,8 +23,8 @@ class WeekReport(models.Model):
     普通周报
     """
     topic = models.CharField(max_length=30, null=True, blank=True, verbose_name="标题")
-    content = models.CharField(max_length=120, null=True, blank=True, verbose_name="内容")
-    user = models.ForeignKey(UserProfile, null=True, blank=True, verbose_name="所属小组")
+    content = models.TextField(null=True, blank=True, verbose_name="内容")
+    user = models.ForeignKey(UserProfile, null=True, blank=True, verbose_name="作者")
     add_time = models.DateTimeField(default=datetime.now, verbose_name=u"创建时间")
 
     class Meta:

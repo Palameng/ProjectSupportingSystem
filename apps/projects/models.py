@@ -17,7 +17,7 @@ class Projects(models.Model):
         ('1', "立项阶段"),
         ('2', "开发阶段"),
         ('3', "测试阶段"),
-        ('4', "提交掩膜"),
+        ('4', "结项"),
     )
 
     name = models.CharField(max_length=30, null=True, blank=True, verbose_name="项目名称")

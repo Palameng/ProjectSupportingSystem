@@ -1,7 +1,7 @@
 # _*_ encoding:utf-8 _*
 from django.shortcuts import render
 from django.views.generic import View
-from .models import UserProfile
+from users.models import UserProfile
 from projects.models import Projects, ProjectUsers
 from weekreports.models import WeekReport
 # Create your views here.

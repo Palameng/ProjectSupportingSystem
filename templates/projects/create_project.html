@@ -15,11 +15,12 @@
           <p class="margin-bottom-15">完成信息填写以创建项目</p>
           <div class="row">
             <div class="col-md-12">
-              <form role="form" id="templatemo-preferences-form">
+              <form role="form" id="templatemo-preferences-form" method="post" action="{% url 'project:project_add' %}">
+                {% csrf_token %}
                 <div class="row">
                   <div class="col-md-6 margin-bottom-15">
-                    <label for="project_name" class="control-label">项目名称</label>
-                    <input type="text" class="form-control" id="project_name" value="">
+                    <label for="projectName" class="control-label">项目名称</label>
+                    <input type="text" class="form-control" id="projectName" name="projectName" value="">
                   </div>
 {#                  <div class="col-md-6 margin-bottom-15">#}
 {#                    <label for="lastName" class="control-label">Last Name</label>#}
@@ -38,8 +39,8 @@
 {#                </div>#}
                 <div class="row">
                   <div class="col-md-6 margin-bottom-15">
-                    <label for="currentPassword">项目经理</label>
-                    <input type="text" class="form-control" id="currentPassword" value="{{ request.user.username }}" disabled>
+                    <label for="projectManager">项目经理</label>
+                    <input type="text" class="form-control" id="projectManager" value="{{ request.user.username }}" name="projectManager" disabled>
                   </div>
                   <div class="col-md-6 margin-bottom-15">
                   </div>
@@ -83,14 +84,14 @@
 
               <div class="row">
                 <div class="col-md-6 margin-bottom-15">
-                  <label for="singleSelectField">项目类型</label>
-                  <select class="form-control margin-bottom-15" id="singleSelectField">
+                  <label for="projectType">项目类型</label>
+                  <select class="form-control margin-bottom-15" id="projectType" name="projectType">
                     <option>金融产品</option>
                     <option>电信产品</option>
                     <option>物联网产品</option>
                   </select>
-                  <label for="multipleSelectUser">选择人员</label>
-                  <select multiple class="form-control" id="multipleSelectUser">
+                  <label for="projectStuffs">选择人员</label>
+                  <select multiple class="form-control" id="projectStuffs" name="projectStuffs">
                       {% for user in all_users %}
                           <option>{{ user.username }}</option>
                       {% endfor %}
@@ -157,8 +158,8 @@
 {#              </div>#}
               <div class="row">
                         <div class="col-md-12 margin-bottom-15">
-                        <label for="project_detail">项目简述</label>
-                        <textarea class="form-control" rows="3" id="project_detail"></textarea>
+                        <label for="projectDetail">项目简述</label>
+                        <textarea class="form-control" rows="3" id="projectDetail" name="projectDetail"></textarea>
                     </div>
               </div>
               <div class="row">
@@ -171,8 +172,8 @@
 
               <div class="row templatemo-form-buttons">
                 <div class="col-md-12">
-                  <button type="submit" class="btn btn-primary">Update</button>
-                  <button type="reset" class="btn btn-default">Reset</button>
+                  <button type="submit" class="btn btn-primary">提交</button>
+                  <button type="reset" class="btn btn-default">清空</button>
                 </div>
               </div>
             </form>

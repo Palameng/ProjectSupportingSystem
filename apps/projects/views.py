@@ -2,8 +2,11 @@
 from django.shortcuts import render
 from django.views.generic import View
 from .models import Projects, ProjectUsers, Missions, Stages, MissionUsers
+from .forms import AddProjectForm
 from users.models import UserProfile
-
+from django.http import HttpResponse, HttpResponseRedirect
+from django.core.urlresolvers import reverse
+from datetime import datetime
 # Create your views here.
 
 
@@ -28,6 +31,34 @@ class AddView(View):
         return render(request, 'projects/create_project.html', {
             "all_users": all_users,
         })
+
+    def post(self, request):
+        project_add_form = AddProjectForm(request.POST)
+        if project_add_form.is_valid():
+            project_name = request.POST.get("projectName", "")
+            project_type = request.POST.get("projectType", "")
+            project_stuffs = request.POST.getlist("projectStuffs", "")
+            project_detail = request.POST.get("projectDetail", "")
+
+            new_project = Projects()
+            new_project.name = project_name
+
+            if project_type == "金融产品":
+                new_project.field = '1'
+            elif project_type == "电信产品":
+                new_project.field = '2'
+            elif project_type == "物联网相关":
+                new_project.field = '3'
+
+            new_project.status = '1'
+            new_project.version = '0'
+            new_project.progress = 0
+            new_project.desc = project_detail
+            new_project.add_time = datetime.now()
+
+            new_project.save()
+
+        return HttpResponseRedirect(reverse("index"))
 
 
 class ProjectDetailView(View):

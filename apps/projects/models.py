@@ -1,6 +1,5 @@
 from django.db import models
 from datetime import datetime
-
 from users.models import UserProfile
 # Create your models here.
 
@@ -20,6 +19,7 @@ class Projects(models.Model):
         ('4', "结项"),
     )
 
+    user = models.ManyToManyField(UserProfile, verbose_name="项目开发者")
     name = models.CharField(max_length=30, null=True, blank=True, verbose_name="项目名称")
     field = models.CharField(max_length=30, choices=PROJECT_FIELD, default="未设置", verbose_name="项目类型")
     status = models.CharField(max_length=30, choices=PROJECT_STATUS, default="未开始", verbose_name="项目阶段")
@@ -35,10 +35,13 @@ class Projects(models.Model):
     def __str__(self):
         return self.name
 
+    def get_this_project_all_staffs(self):
+        return ",".join([user.username for user in self.user.all()])
+
 
 class Stages(models.Model):
     """
-    阶段
+    项目-子阶段
     """
     name = models.CharField(max_length=30, null=True, blank=True, verbose_name="阶段名")
     project = models.ForeignKey(Projects, null=True, blank=True, verbose_name="项目")
@@ -57,7 +60,7 @@ class Stages(models.Model):
 
 class Missions(models.Model):
     """
-    任务
+    项目-子阶段-子任务
     """
     stage = models.ForeignKey(Stages, null=True, blank=True, verbose_name="所属阶段")
     name = models.CharField(max_length=30, null=True, blank=True, verbose_name="任务名")
@@ -73,33 +76,33 @@ class Missions(models.Model):
         return str(self.stage.project.name + ':' + self.name)
 
 
-class ProjectUsers(models.Model):
-    """
-    项目成员关联表
-    """
-    user = models.ForeignKey(UserProfile, null=True, blank=True, verbose_name="成员")
-    project = models.ForeignKey(Projects, null=True, blank=True, verbose_name="项目")
-    add_time = models.DateTimeField(default=datetime.now, verbose_name=u"添加时间")
+# class ProjectUsers(models.Model):
+#     """
+#     项目成员关联表
+#     """
+#     user = models.ForeignKey(UserProfile, null=True, blank=True, verbose_name="成员")
+#     project = models.ForeignKey(Projects, null=True, blank=True, verbose_name="项目")
+#     add_time = models.DateTimeField(default=datetime.now, verbose_name=u"添加时间")
+#
+#     class Meta:
+#         verbose_name = "项目成员关联表"
+#         verbose_name_plural = verbose_name
+#
+#     def __str__(self):
+#         return str(self.id)
 
-    class Meta:
-        verbose_name = "项目成员关联表"
-        verbose_name_plural = verbose_name
 
-    def __str__(self):
-        return str(self.id)
-
-
-class MissionUsers(models.Model):
-    """
-    任务成员关联表
-    """
-    user = models.ForeignKey(UserProfile, null=True, blank=True, verbose_name="成员")
-    mission = models.ForeignKey(Missions, null=True, blank=True, verbose_name="任务")
-    add_time = models.DateTimeField(default=datetime.now, verbose_name=u"添加时间")
-
-    class Meta:
-        verbose_name = "任务成员关联表"
-        verbose_name_plural = verbose_name
-
-    def __str__(self):
-        return str(self.id)
+# class MissionUsers(models.Model):
+#     """
+#     任务成员关联表
+#     """
+#     user = models.ForeignKey(UserProfile, null=True, blank=True, verbose_name="成员")
+#     mission = models.ForeignKey(Missions, null=True, blank=True, verbose_name="任务")
+#     add_time = models.DateTimeField(default=datetime.now, verbose_name=u"添加时间")
+#
+#     class Meta:
+#         verbose_name = "任务成员关联表"
+#         verbose_name_plural = verbose_name
+#
+#     def __str__(self):
+#         return str(self.id)

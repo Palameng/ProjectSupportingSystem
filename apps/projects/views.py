@@ -1,7 +1,7 @@
 # _*_ encoding:utf-8 _*
 from django.shortcuts import render
 from django.views.generic import View
-from .models import Projects, ProjectUsers, Missions, Stages, MissionUsers
+from .models import Projects, Missions, Stages
 from .forms import AddProjectForm
 from users.models import UserProfile
 from django.http import HttpResponse, HttpResponseRedirect
@@ -10,13 +10,13 @@ from datetime import datetime
 # Create your views here.
 
 
-class ListView(View):
+class MyProjectsListView(View):
     def get(self, request):
         all_projects = Projects.objects.all()
-        users_to_projects = ProjectUsers.objects.all()
+        # users_to_projects = ProjectUsers.objects.all()
         return render(request, 'projects/project_list.html', {
             "all_projects": all_projects,
-            "users_to_projects": users_to_projects,
+            # "users_to_projects": users_to_projects,
         })
 
 
@@ -80,8 +80,8 @@ class MissionDetailView(View):
     """
     def get(self, request, mission_id):
         current_mission = Missions.objects.get(id=int(mission_id))
-        current_mission_all_staffs = MissionUsers.objects.filter(id=int(mission_id))
+        # current_mission_all_staffs = MissionUsers.objects.filter(id=int(mission_id))
         return render(request, "projects/project_mission_detail.html", {
             "current_mission": current_mission,
-            "current_mission_all_staffs": current_mission_all_staffs,
+            # "current_mission_all_staffs": current_mission_all_staffs,
         })

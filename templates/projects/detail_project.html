@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block custom_title %}
+    <title>项目详情</title>
+{% endblock %}
+
+{% block custom_content %}
+            <div class="templatemo-content">
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'index' %}">首页</a></li>
+                    <li class="active">项目详情</li>
+                </ol>
+                <h1>项目名：{{ current_project.name }}</h1>
+                <p class="margin-bottom-15">{{ current_project.desc }}</p>
+                <div class="row">
+                    {% for stage in all_stages %}
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                        <div class="panel-heading">
+                            {{ stage.name }}
+                        </div>
+                                <div class="progress progress-striped">
+                                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ misson.progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ misson.progress }}%">
+                                            <span class="sr-only">{{ stage.progress }}% Complete (success)</span>
+                                          </div>
+                                        </div>
+                        <div class="panel-body">
+                            <div class="panel-group" id="accordion">
+                                {% for misson in stage.get_all_missions %}
+                                    <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#{{ misson.id }}" class="collapsed">{{ misson.name }}</a>
+                                        </h4>
+                                    </div>
+                                    <div id="{{ misson.id }}" class="panel-collapse collapse" style="height: 0px;">
+                                        <div class="panel-body">
+                                            {{ misson.content }}
+                                        </div>
+                                        <div class="progress progress-striped">
+                                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ misson.progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ misson.progress }}%">
+                                            <span class="sr-only">{{ misson.progress }}% Complete (success)</span>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                </div>
+{% endblock %}

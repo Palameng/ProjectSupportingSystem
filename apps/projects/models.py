@@ -45,6 +45,7 @@ class Stages(models.Model):
     """
     name = models.CharField(max_length=30, null=True, blank=True, verbose_name="阶段名")
     project = models.ForeignKey(Projects, null=True, blank=True, verbose_name="项目")
+    progress = models.IntegerField(default=0, verbose_name="阶段进度")
     add_time = models.DateTimeField(default=datetime.now, verbose_name=u"添加时间")
 
     class Meta:

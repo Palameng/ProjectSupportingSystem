@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a0fa83e-6957-4032-8d94-6117f619c482" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/projects/migrations/0016_auto_20180101_2055.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/projects/migrations/0017_auto_20180101_2058.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/projects/migrations/0018_auto_20180101_2132.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/projects/migrations/0019_stages_progress.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/projects/adminx.py" afterPath="$PROJECT_DIR$/apps/projects/adminx.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/projects/models.py" afterPath="$PROJECT_DIR$/apps/projects/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/projects/urls.py" afterPath="$PROJECT_DIR$/apps/projects/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/projects/views.py" afterPath="$PROJECT_DIR$/apps/projects/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/users/views.py" afterPath="$PROJECT_DIR$/apps/users/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/templatemo_main.css" afterPath="$PROJECT_DIR$/static/css/templatemo_main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/main_panel.html" afterPath="$PROJECT_DIR$/templates/main_panel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/projects/create_project.html" afterPath="$PROJECT_DIR$/templates/projects/create_project.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,8 +41,8 @@
       <file leaf-file-name="main_panel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/main_panel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="234" column="66" lean-forward="false" selection-start-line="234" selection-start-column="39" selection-end-line="234" selection-end-column="66" />
+            <state relative-caret-position="1062">
+              <caret line="59" column="68" lean-forward="true" selection-start-line="59" selection-start-column="68" selection-end-line="59" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -54,8 +51,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/projects/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-390">
-              <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="42" />
+            <state relative-caret-position="576">
+              <caret line="73" column="28" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="28" />
               <folding>
                 <element signature="e#24#59#0" expanded="true" />
               </folding>
@@ -66,19 +63,24 @@
       <file leaf-file-name="own_all_project.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/projects/own_all_project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            <state relative-caret-position="54">
+              <caret line="3" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProjectSupportingSystem/settings.py">
+      <file leaf-file-name="detail_project.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/projects/detail_project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="46" column="4" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="15" />
-              <folding />
+            <state relative-caret-position="738">
+              <caret line="44" column="46" lean-forward="true" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
+              <folding>
+                <element signature="e#203#361#0#HTML" expanded="false" />
+                <element signature="e#1068#1105#0#HTML" expanded="true" />
+                <element signature="e#2051#2071#0#HTML" expanded="true" />
+                <element signature="e#2513#2550#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,8 +100,8 @@
       <file leaf-file-name="create_project.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/projects/create_project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1314">
-              <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+            <state relative-caret-position="288">
+              <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -108,34 +110,33 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="44" column="54" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/projects/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+            <state relative-caret-position="522">
+              <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#3405#3411#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminx.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/projects/adminx.py">
+      <file leaf-file-name="templatemo_main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/templatemo_main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="35" column="16" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/projects/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="22" column="86" lean-forward="true" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
               <folding>
-                <element signature="e#24#37#0" expanded="true" />
-                <marker date="1514813555908" expanded="true" signature="2231:2672" ph="..." />
-                <marker date="1514813555908" expanded="true" signature="2238:2505" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,8 +154,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>css/</find>
-      <find>Message</find>
       <find>bootstrap</find>
       <find>images</find>
       <find>Total</find>
@@ -183,6 +182,8 @@
       <find>ProjectUsers</find>
       <find>project_user_list</find>
       <find>MissionUsers</find>
+      <find>item</find>
+      <find>copy</find>
     </findStrings>
     <replaceStrings>
       <replace>/static/</replace>
@@ -212,21 +213,22 @@
         <option value="$PROJECT_DIR$/templates/projects/project_detail.html" />
         <option value="$PROJECT_DIR$/templates/projects/project_mission_detail.html" />
         <option value="$PROJECT_DIR$/templates/create_project.html" />
-        <option value="$PROJECT_DIR$/static/css/templatemo_main.css" />
         <option value="$PROJECT_DIR$/apps/weekreports/adminx.py" />
         <option value="$PROJECT_DIR$/apps/weekreports/models.py" />
         <option value="$PROJECT_DIR$/ProjectSupportingSystem/urls.py" />
         <option value="$PROJECT_DIR$/apps/weekreports/urls.py" />
-        <option value="$PROJECT_DIR$/templates/projects/create_project.html" />
         <option value="$PROJECT_DIR$/apps/projects/forms.py" />
-        <option value="$PROJECT_DIR$/apps/projects/views.py" />
         <option value="$PROJECT_DIR$/apps/projects/urls.py" />
         <option value="$PROJECT_DIR$/templates/projects/own_all_project.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/apps/projects/adminx.py" />
-        <option value="$PROJECT_DIR$/templates/main_panel.html" />
         <option value="$PROJECT_DIR$/apps/users/views.py" />
+        <option value="$PROJECT_DIR$/apps/projects/views.py" />
+        <option value="$PROJECT_DIR$/templates/main_panel.html" />
+        <option value="$PROJECT_DIR$/templates/projects/create_project.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/static/css/templatemo_main.css" />
         <option value="$PROJECT_DIR$/apps/projects/models.py" />
+        <option value="$PROJECT_DIR$/templates/projects/detail_project.html" />
       </list>
     </option>
   </component>
@@ -239,7 +241,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="793" />
     <option name="y" value="2" />
-    <option name="width" value="1233" />
+    <option name="width" value="1503" />
     <option name="height" value="1396" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -629,14 +631,13 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33200637" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33200637" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.122019075" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1236089" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@ProjectSupportingSystem" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@ProjectSupportingSystem" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3718153" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -646,6 +647,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -691,13 +693,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ProjectSupportingSystem/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2640">
-          <caret line="133" column="37" lean-forward="false" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/vendors/eve/e.html" />
     <entry file="file://$PROJECT_DIR$/ProjectSupportingSystem/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -843,13 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/templatemo_main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -907,45 +895,19 @@
     <entry file="file://$PROJECT_DIR$/ProjectSupportingSystem/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
-          <caret line="46" column="4" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="15" />
+          <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/projects/adminx.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="108">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#24#37#0" expanded="true" />
+            <element signature="e#24#37#0" expanded="false" />
             <marker date="1514813555908" expanded="true" signature="2231:2672" ph="..." />
             <marker date="1514813555908" expanded="true" signature="2238:2505" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/projects/create_project.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1314">
-          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="44" column="54" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/projects/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding>
-            <element signature="e#24#65#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -962,36 +924,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/projects/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-390">
-          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="42" />
+        <state relative-caret-position="576">
+          <caret line="73" column="28" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="28" />
           <folding>
             <element signature="e#24#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/projects/own_all_project.html">
+    <entry file="file://$PROJECT_DIR$/apps/projects/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding>
+            <element signature="e#24#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/projects/create_project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/projects/own_all_project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/main_panel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="234" column="66" lean-forward="false" selection-start-line="234" selection-start-column="39" selection-end-line="234" selection-end-column="66" />
+        <state relative-caret-position="1062">
+          <caret line="59" column="68" lean-forward="true" selection-start-line="59" selection-start-column="68" selection-end-line="59" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/templatemo_main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="16" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#3405#3411#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/projects/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        <state relative-caret-position="126">
+          <caret line="22" column="86" lean-forward="true" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/projects/detail_project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="44" column="46" lean-forward="true" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
+          <folding>
+            <element signature="e#203#361#0#HTML" expanded="false" />
+            <element signature="e#1068#1105#0#HTML" expanded="true" />
+            <element signature="e#2051#2071#0#HTML" expanded="true" />
+            <element signature="e#2513#2550#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

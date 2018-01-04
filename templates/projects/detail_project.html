@@ -15,9 +15,9 @@
                 <p class="margin-bottom-15">{{ current_project.desc }}</p>
                 <div class="row">
                     {% for stage in all_stages %}
-                        <div class="col-md-12">
+                        <div class="col-md-9">
                             <div class="panel panel-default">
-                        <div class="panel-heading">
+                        <div class="panel-heading" style="background-color: #39b3d7">
                             {{ stage.name }}
                         </div>
                                 <div class="progress progress-striped">
@@ -29,10 +29,10 @@
                             <div class="panel-group" id="accordion">
                                 {% for misson in stage.get_all_missions %}
                                     <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
+                                    <div class="panel-heading" style="background-color: #c0a16b">
+                                        <h5 class="panel-title">
                                             <a data-toggle="collapse" data-parent="#accordion" href="#{{ misson.id }}" class="collapsed">{{ misson.name }}</a>
-                                        </h4>
+                                        </h5>
                                     </div>
                                     <div id="{{ misson.id }}" class="panel-collapse collapse" style="height: 0px;">
                                         <div class="panel-body">

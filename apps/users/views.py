@@ -15,7 +15,7 @@ class IndexView(View):
         if not user:
             raise Exception
 
-        all_my_projects = user.projects_set.all()
+        all_my_projects = user.projects_set.all()[:2]
         all_my_weekreports = WeekReport.objects.filter(user=user)
 
         # sum_of_project = Projects.objects.all().count()

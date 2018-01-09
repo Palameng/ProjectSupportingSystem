@@ -7,15 +7,29 @@ from users.models import UserProfile
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from datetime import datetime
+from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import F
 # Create your views here.
 
 
 class MyProjectsListView(View):
     def get(self, request):
-        all_projects = Projects.objects.all()
+        user = request.user
+        all_my_projects = user.projects_set.all()
+
+        # 对所有A进行分页
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+
+        # 第二个参数代表每一页显示的个数
+        p = Paginator(all_my_projects, 1, request=request)
+        all_my_projects = p.page(page)
+
         # users_to_projects = ProjectUsers.objects.all()
-        return render(request, 'projects/project_list.html', {
-            "all_projects": all_projects,
+        return render(request, 'projects/own_all_project.html', {
+            "all_my_projects": all_my_projects,
             # "users_to_projects": users_to_projects,
         })
 
@@ -68,7 +82,18 @@ class ProjectDetailView(View):
     def get(self, request, project_id):
         # all_stages = Stages.objects.filter(project__id=int(project_id))
         current_project = Projects.objects.get(id=int(project_id))
+
+        # 获取当前项目的进度值
+        current_project.set_progress()
+
         all_stages = current_project.stages_set.all()
+
+        # 获取当前项目下每一个阶段的进度值
+        for stage in all_stages:
+            stage.get_progress()
+            stage.save()
+
+        current_project.save()
         return render(request, 'projects/detail_project.html', {
             "all_stages": all_stages,
             "current_project": current_project,

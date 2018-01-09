@@ -38,6 +38,12 @@ class Projects(models.Model):
     def get_this_project_all_staffs(self):
         return ",".join([user.username for user in self.user.all()])
 
+    def set_progress(self):
+        all_stages = self.stages_set.all()
+        # 计算当前项目的进度值, 一个平均权重的计算法
+        for stage in all_stages:
+            self.progress += stage.progress * (1/all_stages.count())
+
 
 class Stages(models.Model):
     """
@@ -57,6 +63,12 @@ class Stages(models.Model):
 
     def get_all_missions(self):
         return self.missions_set.all()
+
+    def get_progress(self):
+        all_missions = self.missions_set.all()
+        # 计算当前阶段的进度值, 一个平均权重的计算法
+        for mission in all_missions:
+            self.progress += mission.progress * (1/all_missions.count())
 
 
 class Missions(models.Model):

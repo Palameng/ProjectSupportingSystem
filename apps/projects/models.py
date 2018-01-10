@@ -19,7 +19,7 @@ class Projects(models.Model):
         ('4', "结项"),
     )
 
-    user = models.ManyToManyField(UserProfile, verbose_name="项目开发者")
+    user = models.ManyToManyField(UserProfile, verbose_name="项目主要开发者")
     name = models.CharField(max_length=30, null=True, blank=True, verbose_name="项目名称")
     field = models.CharField(max_length=30, choices=PROJECT_FIELD, default="未设置", verbose_name="项目类型")
     status = models.CharField(max_length=30, choices=PROJECT_STATUS, default="未开始", verbose_name="项目阶段")
@@ -41,6 +41,7 @@ class Projects(models.Model):
     def set_progress(self):
         all_stages = self.stages_set.all()
         # 计算当前项目的进度值, 一个平均权重的计算法
+        self.progress = 0
         for stage in all_stages:
             self.progress += stage.progress * (1/all_stages.count())
 
@@ -67,6 +68,7 @@ class Stages(models.Model):
     def get_progress(self):
         all_missions = self.missions_set.all()
         # 计算当前阶段的进度值, 一个平均权重的计算法
+        self.progress = 0
         for mission in all_missions:
             self.progress += mission.progress * (1/all_missions.count())
 
@@ -75,6 +77,7 @@ class Missions(models.Model):
     """
     项目-子阶段-子任务
     """
+    user = models.ManyToManyField(UserProfile, verbose_name="任务负责人")
     stage = models.ForeignKey(Stages, null=True, blank=True, verbose_name="所属阶段")
     name = models.CharField(max_length=30, null=True, blank=True, verbose_name="任务名")
     progress = models.IntegerField(default=0, verbose_name="任务进度")

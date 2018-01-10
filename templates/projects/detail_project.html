@@ -17,11 +17,11 @@
                     {% for stage in all_stages %}
                         <div class="col-md-9">
                             <div class="panel panel-default">
-                        <div class="panel-heading" style="background-color: #39b3d7">
+                        <div class="panel-heading" style="background-color: #adadad">
                             {{ stage.name }}
                         </div>
                                 <div class="progress progress-striped">
-                                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ misson.progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ misson.progress }}%">
+                                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ stage.progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ stage.progress }}%">
                                             <span class="sr-only">{{ stage.progress }}% Complete (success)</span>
                                           </div>
                                         </div>

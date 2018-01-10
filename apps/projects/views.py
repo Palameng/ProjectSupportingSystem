@@ -34,7 +34,7 @@ class MyProjectsListView(View):
         })
 
 
-class AddView(View):
+class CreateProjectStepOneView(View):
     """
     增加项目
     """
@@ -70,6 +70,10 @@ class AddView(View):
             new_project.desc = project_detail
             new_project.add_time = datetime.now()
 
+            # 添加ManytoMany关系
+            for stuff_name in project_stuffs:
+                new_project.user.add(UserProfile.objects.get(username=stuff_name))
+
             new_project.save()
 
         return HttpResponseRedirect(reverse("index"))
@@ -83,9 +87,6 @@ class ProjectDetailView(View):
         # all_stages = Stages.objects.filter(project__id=int(project_id))
         current_project = Projects.objects.get(id=int(project_id))
 
-        # 获取当前项目的进度值
-        current_project.set_progress()
-
         all_stages = current_project.stages_set.all()
 
         # 获取当前项目下每一个阶段的进度值
@@ -93,7 +94,11 @@ class ProjectDetailView(View):
             stage.get_progress()
             stage.save()
 
+        # 获取当前项目的进度值
+        current_project.progress = 0
+        current_project.set_progress()
         current_project.save()
+
         return render(request, 'projects/detail_project.html', {
             "all_stages": all_stages,
             "current_project": current_project,
@@ -111,3 +116,11 @@ class MissionDetailView(View):
             "current_mission": current_mission,
             # "current_mission_all_staffs": current_mission_all_staffs,
         })
+
+
+class CreateProjectStepTwoView(View):
+    """
+    填写创建项目的基础信息后初始化项目阶段和任务细节
+    """
+    pass
+

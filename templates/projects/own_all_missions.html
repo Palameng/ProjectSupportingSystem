@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block custom_title %}
+    <title>我的项目</title>
+{% endblock %}
+
+{% block custom_content %}
+    <div class="templatemo-content">
+          <ol class="breadcrumb">
+            <li><a href="{% url 'index' %}">首页</a></li>
+            <li class="active">我的项目</li>
+          </ol>
+          <div class="row margin-bottom-30">
+            <div class="col-md-12">
+              <ul class="nav nav-pills">
+                <li class="active"><a href="#">已完成<span class="badge">1</span></a></li>
+                <li class="color1"><a href="#">正在进行<span class="badge">1</span></a></li>
+              </ul>
+            </div>
+          </div>
+            <div class="row">
+            <div class="col-md-12">
+
+              <div class="table-responsive">
+                <h4 class="margin-bottom-15">我的所有项目</h4>
+                <table class="table table-striped table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>项目名</th>
+                      <th>项目成员</th>
+                      <th>类型</th>
+                      <th>状态</th>
+                      <th>当前版本</th>
+                      <th>进度</th>
+                      <th>创建时间</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for project in all_my_projects.object_list %}
+                    <tr>
+                        <td>{{ project.name }}</td>
+                        <td>{{ project.get_this_project_all_staffs }}</td>
+                        <td>{{ project.get_field_display }}</td>
+                        <td>{{ project.get_status_display }}</td>
+                        <td>{{ project.version }}</td>
+                        <td>{{ project.progress }}%</td>
+                        <td>{{ project.add_time }}</td>
+                        <td>
+                        <!-- Split button -->
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">操作</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="{% url 'project:project_detail' project.id %}">查看</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+{#              <ul class="pagination pull-right">#}
+{#                <li class="disabled"><a href="#">&laquo;</a></li>#}
+{#                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>#}
+{#                <li><a href="#">2 <span class="sr-only">(current)</span></a></li>#}
+{#                <li><a href="#">3 <span class="sr-only">(current)</span></a></li>#}
+{#                <li><a href="#">4 <span class="sr-only">(current)</span></a></li>#}
+{#                <li><a href="#">5 <span class="sr-only">(current)</span></a></li>#}
+{#                <li><a href="#">&raquo;</a></li>#}
+{#              </ul>#}
+            </div>
+                <ul class="pagination pull-right">
+                    {% if all_my_projects.has_previous %}
+                        <li class="long"><a href="?{{ all_my_projects.previous_page_number.querystring }}">上一页</a></li>
+                    {% endif %}
+                    {% for page in all_my_projects.pages %}
+                        {% if page %}
+                            {% ifequal page all_my_projects.number %}
+                                <li class="active"><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                            {% else %}
+                                <li><a href="?{{ page.querystring }}" class="page">{{ page }}</a></li>
+                            {% endifequal %}
+                        {% else %}
+                            <li class="disabled"><a href="">...</a> </li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if all_my_projects.has_next %}
+                        <li class="long"><a href="?{{ all_my_projects.next_page_number.querystring }}">下一页</a></li>
+                    {% endif %}
+              </ul>
+          </div>
+    </div>
+{% endblock %}

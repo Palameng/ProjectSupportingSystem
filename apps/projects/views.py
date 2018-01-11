@@ -124,3 +124,10 @@ class CreateProjectStepTwoView(View):
     """
     pass
 
+
+class TestTreeView(View):
+    def get(self, request):
+        return render(request, 'projects/treeData.html', {
+
+        })
+

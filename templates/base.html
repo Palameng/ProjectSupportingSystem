@@ -7,6 +7,7 @@
     {% block custom_title %}
     <title>Dashboard, Free HTML5 Admin Template</title>
     {% endblock %}
+    <link href="http://www.jq22.com/jquery/bootstrap-3.3.4.css" rel="stylesheet">
     <meta name="keywords" content="" />
     <meta name="description" content="" />
   <meta name="viewport" content="width=device-width">
@@ -45,6 +46,7 @@
                 <li><a href="{% url 'project:own_project_list' %}">我的项目</a></li>
                 <li><a href="{% url 'project:project_add' %}">我的任务</a></li>
                 <li><a href="{% url 'project:project_add' %}">新建项目</a></li>
+                <li><a href="{% url 'project:test_tree' %}">树表单测试</a></li>
             </ul>
           </li>
             <li class="sub open">
@@ -90,8 +92,6 @@
     <script src="{% static 'js/Chart.min.js' %}"></script>
     <script src="{% static 'js/templatemo_script.js' %}"></script>
     <script type="text/javascript">
-        {% block custom_js %}
-        {% endblock %}
     // Line chart
     var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
     var lineChartData = {
@@ -141,5 +141,8 @@
       // });
   });
   </script>
+  {% block custom_js %}
+
+  {% endblock %}
 </body>
 </html>

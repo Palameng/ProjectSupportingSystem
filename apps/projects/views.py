@@ -36,7 +36,7 @@ class MyProjectsListView(View):
 
 class CreateProjectStepOneView(View):
     """
-    增加项目
+    增加项目第一步
     """
     def get(self, request):
 
@@ -127,7 +127,7 @@ class CreateProjectStepTwoView(View):
 
 class TestTreeView(View):
     def get(self, request):
-        return render(request, 'projects/treeData.html', {
+        return render(request, 'projects/fullcalendar.html', {
 
         })
 

@@ -42,8 +42,8 @@
                     {
                         //阶段
                         text: '{{ stage.name }}',
-                        href: '#parent1',
-                        tags: ['4'],
+                        href: '#localhost',
+                        tags: ['{{ stage.missions_set.all.count }}'],
                         nodes: [
                             {% for mission in stage.get_all_missions %}
                                 {

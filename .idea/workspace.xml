@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a0fa83e-6957-4032-8d94-6117f619c482" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/projects/views.py" afterPath="$PROJECT_DIR$/apps/projects/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/projects/detail_project.html" afterPath="$PROJECT_DIR$/templates/projects/detail_project.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,21 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="create_project.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/projects/create_project.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2610">
-              <caret line="145" column="2" lean-forward="false" selection-start-line="145" selection-start-column="2" selection-end-line="145" selection-end-column="2" />
+            <state relative-caret-position="108">
+              <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -42,19 +34,21 @@
       <file leaf-file-name="detail_project.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/projects/detail_project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            <state relative-caret-position="-360">
+              <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="own_all_missions.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/projects/own_all_missions.html">
+      <file leaf-file-name="fullcalendar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/projects/fullcalendar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="609">
+              <caret line="143" column="35" lean-forward="true" selection-start-line="143" selection-start-column="35" selection-end-line="143" selection-end-column="35" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,33 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="templatemo_script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/templatemo_script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/projects/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-              <folding>
-                <element signature="e#24#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/projects/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1674">
-              <caret line="102" column="30" lean-forward="false" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="30" />
+            <state relative-caret-position="51">
+              <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
               <folding>
                 <element signature="e#24#59#0" expanded="true" />
               </folding>
@@ -210,11 +182,12 @@
         <option value="$PROJECT_DIR$/templates/projects/own_all_missions.html" />
         <option value="$PROJECT_DIR$/apps/projects/models.py" />
         <option value="$PROJECT_DIR$/templates/projects/detail_mission.html" />
-        <option value="$PROJECT_DIR$/apps/projects/views.py" />
         <option value="$PROJECT_DIR$/apps/projects/urls.py" />
         <option value="$PROJECT_DIR$/static/js/tree.js" />
         <option value="$PROJECT_DIR$/templates/projects/treeData.html" />
+        <option value="$PROJECT_DIR$/templates/projects/fullcalendar.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/apps/projects/views.py" />
         <option value="$PROJECT_DIR$/templates/projects/detail_project.html" />
       </list>
     </option>
@@ -249,6 +222,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -322,7 +296,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -334,19 +307,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PycharmProjects\ProjectSupportingSystem\templates\projects" />
+      <recent name="D:\PycharmProjects\ProjectSupportingSystem\static\css" />
+      <recent name="D:\PycharmProjects\ProjectSupportingSystem\static\js" />
+      <recent name="D:\PycharmProjects\ProjectSupportingSystem\static" />
+      <recent name="D:\PycharmProjects\ProjectSupportingSystem\apps\weekreports" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PycharmProjects\ProjectSupportingSystem\templates\projects" />
       <recent name="D:\PycharmProjects\ProjectSupportingSystem\apps" />
       <recent name="D:\PycharmProjects\ProjectSupportingSystem\templates" />
       <recent name="D:\PycharmProjects\ProjectSupportingSystem\extra_apps" />
       <recent name="D:\PycharmProjects\ProjectSupportingSystem" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\PycharmProjects\ProjectSupportingSystem\static\js" />
-      <recent name="D:\PycharmProjects\ProjectSupportingSystem\static" />
-      <recent name="D:\PycharmProjects\ProjectSupportingSystem\static\css" />
-      <recent name="D:\PycharmProjects\ProjectSupportingSystem\apps\weekreports" />
-      <recent name="D:\PycharmProjects\ProjectSupportingSystem\static\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -639,7 +612,7 @@
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18879174" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19038156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -696,34 +669,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ProjectSupportingSystem/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectSupportingSystem/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectSupportingSystem/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectSupportingSystem/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProjectSupportingSystem/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -935,7 +880,7 @@
         <state relative-caret-position="126">
           <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding>
-            <element signature="e#24#65#0" expanded="true" />
+            <element signature="e#24#65#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -970,11 +915,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/bootstrap-treeview.min.js">
+    <entry file="file://$PROJECT_DIR$/templates/projects/treeData.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/fullcalendar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/fullcalendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1384267486000" expanded="true" signature="1487:1495" ph="‹" />
+            <marker date="1384267486000" expanded="true" signature="1542:1550" ph="›" />
+            <marker date="1384267486000" expanded="true" signature="1601:1608" ph="«" />
+            <marker date="1384267486000" expanded="true" signature="1659:1666" ph="»" />
+            <marker date="1384267486000" expanded="true" signature="2131:2139" ph="›" />
+            <marker date="1384267486000" expanded="true" signature="2186:2194" ph="‹" />
+            <marker date="1384267486000" expanded="true" signature="2245:2252" ph="»" />
+            <marker date="1384267486000" expanded="true" signature="2303:2310" ph="«" />
+            <marker date="1384267486000" expanded="true" signature="5741:5758" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="7726:7743" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="15848:15858" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="16526:16532" ph=" " />
+            <marker date="1384267486000" expanded="true" signature="49340:49380" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="50486:50496" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="52625:52642" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="52644:52650" ph=" " />
+            <marker date="1384267486000" expanded="true" signature="64084:64129" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="64265:64305" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="64367:64377" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="64581:64598" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="64679:64685" ph=" " />
+            <marker date="1384267486000" expanded="true" signature="65125:65187" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="65260:65304" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="65414:65454" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="65541:65551" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="66044:66061" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="66063:66069" ph=" " />
+            <marker date="1384267486000" expanded="true" signature="67210:67220" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="67958:67964" ph=" " />
+            <marker date="1384267486000" expanded="true" signature="68272:68278" ph=" " />
+            <marker date="1384267486000" expanded="true" signature="68725:68731" ph=" " />
+            <marker date="1384267486000" expanded="true" signature="69274:69291" ph="..." />
+            <marker date="1384267486000" expanded="true" signature="69293:69299" ph=" " />
+            <marker date="1384267486000" expanded="true" signature="69469:69475" ph=" " />
+            <marker date="1384267486000" expanded="true" signature="132264:132270" ph=" " />
+            <marker date="1384267486000" expanded="true" signature="132270:132276" ph=" " />
+            <marker date="1384267486000" expanded="true" signature="132276:132282" ph=" " />
+            <marker date="1384267486000" expanded="true" signature="148699:148726" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/fullcalendar.print.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/projects/fullcalendar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="143" column="35" lean-forward="true" selection-start-line="143" selection-start-column="35" selection-end-line="143" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -986,26 +1012,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap-treeview.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2610">
-          <caret line="145" column="2" lean-forward="false" selection-start-line="145" selection-start-column="2" selection-end-line="145" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/projects/treeData.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="67" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/projects/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1674">
-          <caret line="102" column="30" lean-forward="false" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="30" />
+        <state relative-caret-position="51">
+          <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
           <folding>
             <element signature="e#24#59#0" expanded="true" />
           </folding>
@@ -1014,8 +1032,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/projects/detail_project.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        <state relative-caret-position="-360">
+          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
           <folding />
         </state>
       </provider>

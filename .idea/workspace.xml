@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a0fa83e-6957-4032-8d94-6117f619c482" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/projects/views.py" afterPath="$PROJECT_DIR$/apps/projects/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/projects/detail_project.html" afterPath="$PROJECT_DIR$/templates/projects/detail_project.html" />
     </list>
@@ -21,21 +21,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+            <state relative-caret-position="180">
+              <caret line="39" column="98" lean-forward="true" selection-start-line="39" selection-start-column="98" selection-end-line="39" selection-end-column="98" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail_project.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detail_project.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/projects/detail_project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-360">
-              <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+            <state relative-caret-position="90">
+              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail_mission.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/projects/detail_mission.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -44,11 +54,9 @@
       <file leaf-file-name="fullcalendar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/projects/fullcalendar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="143" column="35" lean-forward="true" selection-start-line="143" selection-start-column="35" selection-end-line="143" selection-end-column="35" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="18">
+              <caret line="143" column="35" lean-forward="false" selection-start-line="143" selection-start-column="35" selection-end-line="143" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,8 +64,8 @@
       <file leaf-file-name="treeData.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/projects/treeData.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="67" />
+            <state relative-caret-position="108">
+              <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -86,8 +94,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/projects/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
+            <state relative-caret-position="1332">
+              <caret line="83" column="10" lean-forward="false" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
               <folding>
                 <element signature="e#24#59#0" expanded="true" />
               </folding>
@@ -108,10 +116,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Gentelella</find>
-      <find>right_col</find>
-      <find>x_panel</find>
-      <find>Plus Table Design</find>
       <find>Pl</find>
       <find>../</find>
       <find>项目支撑</find>
@@ -138,6 +142,10 @@
       <find>all_A</find>
       <find>&lt;script</find>
       <find>Tags as</find>
+      <find>json</find>
+      <find>defaultData</find>
+      <find>treeview1</find>
+      <find>treeview10</find>
     </findStrings>
     <replaceStrings>
       <replace>/static/</replace>
@@ -186,9 +194,9 @@
         <option value="$PROJECT_DIR$/static/js/tree.js" />
         <option value="$PROJECT_DIR$/templates/projects/treeData.html" />
         <option value="$PROJECT_DIR$/templates/projects/fullcalendar.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/apps/projects/views.py" />
         <option value="$PROJECT_DIR$/templates/projects/detail_project.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -199,10 +207,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="793" />
-    <option name="y" value="2" />
-    <option name="width" value="1503" />
-    <option name="height" value="1396" />
+    <option name="x" value="1204" />
+    <option name="y" value="1" />
+    <option name="width" value="1353" />
+    <option name="height" value="1399" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -222,6 +230,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -296,7 +305,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -612,7 +620,7 @@
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19038156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19197138" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -860,13 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/projects/detail_mission.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/projects/create_project.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
@@ -904,7 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -915,19 +915,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/projects/treeData.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/fullcalendar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -935,46 +926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1384267486000" expanded="true" signature="1487:1495" ph="‹" />
-            <marker date="1384267486000" expanded="true" signature="1542:1550" ph="›" />
-            <marker date="1384267486000" expanded="true" signature="1601:1608" ph="«" />
-            <marker date="1384267486000" expanded="true" signature="1659:1666" ph="»" />
-            <marker date="1384267486000" expanded="true" signature="2131:2139" ph="›" />
-            <marker date="1384267486000" expanded="true" signature="2186:2194" ph="‹" />
-            <marker date="1384267486000" expanded="true" signature="2245:2252" ph="»" />
-            <marker date="1384267486000" expanded="true" signature="2303:2310" ph="«" />
-            <marker date="1384267486000" expanded="true" signature="5741:5758" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="7726:7743" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="15848:15858" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="16526:16532" ph=" " />
-            <marker date="1384267486000" expanded="true" signature="49340:49380" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="50486:50496" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="52625:52642" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="52644:52650" ph=" " />
-            <marker date="1384267486000" expanded="true" signature="64084:64129" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="64265:64305" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="64367:64377" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="64581:64598" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="64679:64685" ph=" " />
-            <marker date="1384267486000" expanded="true" signature="65125:65187" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="65260:65304" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="65414:65454" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="65541:65551" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="66044:66061" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="66063:66069" ph=" " />
-            <marker date="1384267486000" expanded="true" signature="67210:67220" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="67958:67964" ph=" " />
-            <marker date="1384267486000" expanded="true" signature="68272:68278" ph=" " />
-            <marker date="1384267486000" expanded="true" signature="68725:68731" ph=" " />
-            <marker date="1384267486000" expanded="true" signature="69274:69291" ph="..." />
-            <marker date="1384267486000" expanded="true" signature="69293:69299" ph=" " />
-            <marker date="1384267486000" expanded="true" signature="69469:69475" ph=" " />
-            <marker date="1384267486000" expanded="true" signature="132264:132270" ph=" " />
-            <marker date="1384267486000" expanded="true" signature="132270:132276" ph=" " />
-            <marker date="1384267486000" expanded="true" signature="132276:132282" ph=" " />
-            <marker date="1384267486000" expanded="true" signature="148699:148726" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -982,25 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/projects/fullcalendar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="143" column="35" lean-forward="true" selection-start-line="143" selection-start-column="35" selection-end-line="143" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1022,18 +954,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/projects/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
+        <state relative-caret-position="1332">
+          <caret line="83" column="10" lean-forward="false" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
           <folding>
             <element signature="e#24#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/projects/fullcalendar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="143" column="35" lean-forward="false" selection-start-line="143" selection-start-column="35" selection-end-line="143" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/projects/treeData.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/projects/detail_mission.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/projects/detail_project.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        <state relative-caret-position="90">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="39" column="98" lean-forward="true" selection-start-line="39" selection-start-column="98" selection-end-line="39" selection-end-column="98" />
           <folding />
         </state>
       </provider>

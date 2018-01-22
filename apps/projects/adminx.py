@@ -29,7 +29,7 @@ class MissionsAdmin(object):
     progress = models.IntegerField(default=0, verbose_name="任务进度")
     add_time = models.DateTimeField(default=datetime.now, verbose_name=u"添加时间")
     """
-    list_display = ['stage', 'name', 'progress', 'add_time']
+    list_display = ['stage', 'user', 'name', 'progress', 'add_time']
     search_fields = ['stage__name', 'name']
     list_filter = ['stage__name', 'name']
 

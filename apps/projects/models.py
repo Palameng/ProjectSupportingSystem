@@ -91,6 +91,8 @@ class Missions(models.Model):
     def __str__(self):
         return str(self.stage.project.name + ':' + self.name)
 
+    def get_this_mission_all_staffs(self):
+        return ",".join([user.username for user in self.user.all()])
 
 # class ProjectUsers(models.Model):
 #     """

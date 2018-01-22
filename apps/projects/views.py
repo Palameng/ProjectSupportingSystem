@@ -13,6 +13,9 @@ from django.db.models import F
 
 
 class MyProjectsListView(View):
+    """
+    个人参与的所有项目
+    """
     def get(self, request):
         user = request.user
         all_my_projects = user.projects_set.all()
@@ -24,12 +27,37 @@ class MyProjectsListView(View):
             page = 1
 
         # 第二个参数代表每一页显示的个数
-        p = Paginator(all_my_projects, 1, request=request)
+        p = Paginator(all_my_projects, 2, request=request)
         all_my_projects = p.page(page)
 
         # users_to_projects = ProjectUsers.objects.all()
         return render(request, 'projects/own_all_project.html', {
             "all_my_projects": all_my_projects,
+            # "users_to_projects": users_to_projects,
+        })
+
+
+class MyMissionsListView(View):
+    """
+    个人参与的所有任务
+    """
+    def get(self, request):
+        user = request.user
+        all_my_missions = user.missions_set.all()
+
+        # 对所有A进行分页
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+
+        # 第二个参数代表每一页显示的个数
+        p = Paginator(all_my_missions, 3, request=request)
+        all_my_missions = p.page(page)
+
+        # users_to_projects = ProjectUsers.objects.all()
+        return render(request, 'projects/own_all_missions.html', {
+            "all_my_missions": all_my_missions,
             # "users_to_projects": users_to_projects,
         })
 
@@ -54,7 +82,7 @@ class CreateProjectStepOneView(View):
             project_stuffs = request.POST.getlist("projectStuffs", "")
             project_detail = request.POST.get("projectDetail", "")
 
-            new_project = Projects()
+            new_project = Projects.objects.create()
             new_project.name = project_name
 
             if project_type == "金融产品":

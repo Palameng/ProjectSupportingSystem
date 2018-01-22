@@ -28,7 +28,7 @@
         </button>
       </div>
     </div>
-  <div class="template-page-wrapper" >
+  <div class="template-page-wrapper">
       <div class="navbar-collapse collapse templatemo-sidebar">
         <ul class="templatemo-sidebar-menu">
             <li>
@@ -44,7 +44,7 @@
             </a>
             <ul class="templatemo-submenu">
                 <li><a href="{% url 'project:own_project_list' %}">我的项目</a></li>
-                <li><a href="{% url 'project:project_add' %}">我的任务</a></li>
+                <li><a href="{% url 'project:own_mission_list' %}">我的任务</a></li>
                 <li><a href="{% url 'project:project_add' %}">新建项目</a></li>
                 <li><a href="{% url 'project:test_tree' %}">日历控件测试</a></li>
                 <li><a href="{% url 'project:test_tree' %}">动态添加条目测试</a></li>
@@ -58,6 +58,15 @@
             <ul class="templatemo-submenu">
               <li><a href="#">我的周报</a></li>
               <li><a href="#">新建周报</a></li>
+            </ul>
+          </li>
+            <li class="sub open">
+            <a href="javascript:">
+              <i class="fa fa-database"></i> 个人中心 <div class="pull-right"><span class="caret"></span></div>
+            </a>
+            <ul class="templatemo-submenu">
+              <li><a href="#">我的文章</a></li>
+              <li><a href="#">我的附件</a></li>
             </ul>
           </li>
         </ul>

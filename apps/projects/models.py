@@ -81,8 +81,9 @@ class Missions(models.Model):
     stage = models.ForeignKey(Stages, null=True, blank=True, verbose_name="所属阶段")
     name = models.CharField(max_length=30, null=True, blank=True, verbose_name="任务名")
     progress = models.IntegerField(default=0, verbose_name="任务进度")
-    content = models.TextField(verbose_name="任务详细", null=True, blank=True)
+    content = models.TextField(verbose_name="任务描述", null=True, blank=True)
     add_time = models.DateTimeField(default=datetime.now, verbose_name=u"添加时间")
+    end_time = models.DateTimeField(default=datetime.now, verbose_name=u"预计完成时间")
 
     class Meta:
         verbose_name = "子任务"
@@ -93,6 +94,24 @@ class Missions(models.Model):
 
     def get_this_mission_all_staffs(self):
         return ",".join([user.username for user in self.user.all()])
+
+
+class Records(models.Model):
+    """
+    项目-子阶段-子任务-子记录
+    """
+    user = models.ForeignKey(UserProfile, null=True, blank=True, verbose_name="记录登记人")
+    mission = models.ForeignKey(Missions, null=True, blank=True, verbose_name="所属任务")
+    add_time = models.DateTimeField(default=datetime.now, verbose_name=u"添加时间")
+    content = models.TextField(verbose_name="记录描述", null=True, blank=True)
+
+    class Meta:
+        verbose_name = "子记录"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return str(self.mission.name + ':' + self.user.username)
+
 
 # class ProjectUsers(models.Model):
 #     """

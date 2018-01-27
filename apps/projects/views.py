@@ -140,7 +140,7 @@ class MissionDetailView(View):
     def get(self, request, mission_id):
         current_mission = Missions.objects.get(id=int(mission_id))
         # current_mission_all_staffs = MissionUsers.objects.filter(id=int(mission_id))
-        return render(request, "projects/project_mission_detail.html", {
+        return render(request, "projects/detail_mission.html", {
             "current_mission": current_mission,
             # "current_mission_all_staffs": current_mission_all_staffs,
         })

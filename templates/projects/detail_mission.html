@@ -11,169 +11,49 @@
             <li><a href="{% url 'index' %}">首页</a></li>
             <li class="active">任务详细表单</li>
           </ol>
-          <h1>任务详细</h1>
-          <p class="margin-bottom-15">任务详细</p>
           <div class="row">
             <div class="col-md-12">
               <form role="form" id="templatemo-preferences-form" method="post" action="{% url 'project:project_add' %}">
-                {% csrf_token %}
-                <div class="row">
-                  <div class="col-md-6 margin-bottom-15">
-                    <label for="projectName" class="control-label">任务名</label>
-                    <input type="text" class="form-control" id="projectName" name="projectName" value="">
+                  {% csrf_token %}
+                  <div class="row">
+                    <div class="col-md-6 margin-bottom-15">
+                        <label for="missionName" class="control-label">所属项目</label>
+                        <input type="text" class="form-control" id="missionName" name="missionName" value="{{ current_mission.stage.project.name }}" disabled>
+                    </div>
                   </div>
-{#                  <div class="col-md-6 margin-bottom-15">#}
-{#                    <label for="lastName" class="control-label">Last Name</label>#}
-{#                    <input type="text" class="form-control" id="lastName" value="">#}
-{#                  </div>#}
-                </div>
-{#                <div class="row">#}
-{#                  <div class="col-md-6 margin-bottom-15">#}
-{#                    <label>Username</label>#}
-{#                    <p class="form-control-static" id="username">@admin</p>#}
-{#                  </div>#}
-{#                  <div class="col-md-6 margin-bottom-15">#}
-{#                    <label>Email address</label>#}
-{#                    <p class="form-control-static" id="email">admin@company.com</p>#}
-{#                  </div>#}
-{#                </div>#}
-                <div class="row">
-                  <div class="col-md-6 margin-bottom-15">
-                    <label for="projectManager">任务负责人</label>
-                    <input type="text" class="form-control" id="projectManager" value="{{ request.user.username }}" name="projectManager" disabled>
+                  <div class="row">
+                    <div class="col-md-6 margin-bottom-15">
+                        <label for="missionName" class="control-label">任务名</label>
+                        <input type="text" class="form-control" id="missionName" name="missionName" value="{{ current_mission.name }}" disabled>
+                    </div>
                   </div>
-                  <div class="col-md-6 margin-bottom-15">
+                  <div class="row">
+                      <div class="col-md-6 margin-bottom-15">
+                          <label for="missionManager">任务负责人</label>
+                          <input type="text" class="form-control" id="missionManager" value="{{ current_mission.get_this_mission_all_staffs }}" name="missionManager" disabled>
+                      </div>
                   </div>
-                </div>
-
-{#                <div class="row">#}
-{#                  <div class="col-md-6 margin-bottom-15">#}
-{#                    <label for="password_1">New Password</label>#}
-{#                    <input type="password" class="form-control" id="password_1" placeholder="New Password">#}
-{#                  </div>#}
-{#                  <div class="col-md-6 margin-bottom-15">#}
-{#                    <label for="password_2">Confirm New Password</label>#}
-{#                    <input type="password" class="form-control" id="password_2" placeholder="Confirm New Password">#}
-{#                  </div>#}
-{#                </div>#}
-
-{#                <div class="has-success has-feedback">#}
-{#                  <div class="row">#}
-{#                   <div class="col-md-12 margin-bottom-15">#}
-{#                    <label class="control-label" for="inputSuccess">Input with success</label>#}
-{#                    <input type="text" class="form-control" id="inputSuccess">#}
-{#                    <span class="fa fa-check form-control-feedback"></span>#}
-{#                  </div>#}
-{#                </div>#}
-{##}
-{#              </div>#}
-{#              <div class="row has-warning has-feedback">#}
-{#                <div class="col-md-12 margin-bottom-15">#}
-{#                  <label class="control-label" for="inputWarning">Input with warning</label>#}
-{#                  <input type="text" class="form-control" id="inputWarning">#}
-{#                  <span class="fa fa-warning form-control-feedback"></span>#}
-{#                </div>#}
-{#              </div>#}
-{#              <div class="row has-error has-feedback">#}
-{#                <div class="col-md-12 margin-bottom-15">#}
-{#                  <label class="control-label" for="inputError">Input with error</label>#}
-{#                  <input type="text" class="form-control" id="inputError">#}
-{#                  <span class="fa fa-times form-control-feedback"></span>#}
-{#                </div>#}
-{#              </div>#}
-
-              <div class="row">
-                <div class="col-md-6 margin-bottom-15">
-                  <label for="projectType">项目类型</label>
-                  <select class="form-control margin-bottom-15" id="projectType" name="projectType">
-                    <option>金融产品</option>
-                    <option>电信产品</option>
-                    <option>物联网产品</option>
-                  </select>
-                  <label for="projectStuffs">选择人员</label>
-                  <select multiple class="form-control" id="projectStuffs" name="projectStuffs">
-                      {% for user in all_users %}
-                          <option>{{ user.username }}</option>
-                      {% endfor %}
-                  </select>
-                </div>
-{#                <div class="col-md-6">#}
-{#                  <div class="checkbox">#}
-{#                    <label>#}
-{#                      <input type="checkbox" value="">#}
-{#                      Email me when new memeber sign up.#}
-{#                    </label>#}
-{#                  </div>#}
-{#                  <div class="checkbox disabled margin-bottom-15">#}
-{#                    <label>#}
-{#                      <input type="checkbox" value="" disabled>#}
-{#                      Never email me.#}
-{#                    </label>#}
-{#                  </div>#}
-{#                  <div class="radio margin-bottom-15">#}
-{#                    <label>#}
-{#                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>#}
-{#                      HTML format#}
-{#                    </label>#}
-{#                  </div>#}
-{#                  <div class="radio">#}
-{#                    <label>#}
-{#                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">#}
-{#                      Plain text#}
-{#                    </label>#}
-{#                  </div>#}
-{#                  <div class="radio disabled">#}
-{#                    <label>#}
-{#                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>#}
-{#                      Rich text#}
-{#                    </label>#}
-{#                  </div>#}
-{#                </div>#}
-              </div>
-{#              <div class="row">#}
-{#                <div class="col-md-12 margin-bottom-15">#}
-{#                  <label class="checkbox-inline">#}
-{#                    <input type="checkbox" id="inlineCheckbox1" value="option1" checked> Server status#}
-{#                  </label>#}
-{#                  <label class="checkbox-inline">#}
-{#                    <input type="checkbox" id="inlineCheckbox2" value="option2" checked> Memember status#}
-{#                  </label>#}
-{#                  <label class="checkbox-inline">#}
-{#                    <input type="checkbox" id="inlineCheckbox3" value="option3" checked> Expired members#}
-{#                  </label>#}
-{#                </div>#}
-{#              </div>#}
-{#              <div class="row">#}
-{#                <div class="col-md-12 margin-bottom-15">#}
-{#                  <label class="radio-inline">#}
-{#                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> Bootstrap#}
-{#                  </label>#}
-{#                  <label class="radio-inline">#}
-{#                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Foundation#}
-{#                  </label>#}
-{#                  <label class="radio-inline">#}
-{#                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Skeleton#}
-{#                  </label>#}
-{#                </div>#}
-{#              </div>#}
+                  <div class="row">
+                    <div class="col-md-6 margin-bottom-15">
+                        <label for="missionName" class="control-label">创建时间</label>
+                        <input type="text" class="form-control" id="missionName" name="missionName" value="{{ current_mission.add_time }}" disabled>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 margin-bottom-15">
+                        <label for="missionName" class="control-label">预计完成时间</label>
+                        <input type="text" class="form-control" id="missionName" name="missionName" value="{{ current_mission.end_time }}" disabled>
+                    </div>
+                  </div>
               <div class="row">
                         <div class="col-md-12 margin-bottom-15">
-                        <label for="projectDetail">任务简述</label>
-                        <textarea class="form-control" rows="3" id="projectDetail" name="projectDetail"></textarea>
+                        <label for="missionDetail">任务简述</label>
+                        <textarea class="form-control" rows="3" id="missionDetail" name="missionDetail">{{ current_mission.content }}</textarea>
                     </div>
               </div>
-{#              <div class="row">#}
-{#                <div class="col-md-12 margin-bottom-30">#}
-{#                  <label for="exampleInputFile">File input</label>#}
-{#                  <input type="file" id="exampleInputFile">#}
-{#                  <p class="help-block">You can upload file here.</p>#}
-{#                </div>#}
-{#              </div>#}
-
               <div class="row templatemo-form-buttons">
                 <div class="col-md-12">
                   <button type="submit" class="btn btn-primary">编辑</button>
-{#                  <button type="reset" class="btn btn-default">清空</button>#}
                 </div>
               </div>
             </form>

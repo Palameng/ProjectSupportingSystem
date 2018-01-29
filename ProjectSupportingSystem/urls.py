@@ -15,7 +15,7 @@ Including another URLconf
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import url, include
-from users.views import IndexView
+from users.views import IndexView, FormTestView
 from django.views.static import serve
 from ProjectSupportingSystem.settings import MEDIA_ROOT
 import xadmin
@@ -27,5 +27,6 @@ urlpatterns = [
     url(r'^weekreport/', include('weekreports.urls', namespace="weekreport")),
     # 配置上传文件的访问处理函数
     url(r'^media/(?P<path>.*)', serve, {"document_root": MEDIA_ROOT}),
+    url('^formtest$', FormTestView.as_view(), name="formtest"),
 
 ]

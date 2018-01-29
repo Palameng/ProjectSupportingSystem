@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block custom_title %}
+    <title>新建项目</title>
+{% endblock %}
+
+{% block custom_content %}
+        <div class="templatemo-content">
+          <ol class="breadcrumb">
+            <li><a href="{% url 'index' %}">首页</a></li>
+            <li class="active">新建项目</li>
+          </ol>
+          <h1>新项目</h1>
+          <p class="margin-bottom-15">完成信息填写以快速创建项目</p>
+          <div class="row">
+            <div class="col-md-12">
+              <form role="form" id="templatemo-preferences-form" method="post" action="{% url 'project:project_add' %}">
+                {% csrf_token %}
+                {{ new_project_form.non_field_errors }}
+                <div class="row">
+                  <div class="col-md-6 margin-bottom-15">
+{#                      <label for="{{ new_project_form.project_name.id_for_label }}" class="control-label">{{ new_project_form.project_name.label }}</label>#}
+{#                      <br>#}
+{#                    <input type="text" class="form-control" id="projectName" name="projectName" value="">#}
+{#                      {{ new_project_form.project_name }}#}
+                      {{ new_project_form.project_name.errors }}<br>
+                      {{ new_project_form.project_name.label }}:<br>
+                      {{ new_project_form.project_name }}
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 margin-bottom-15">
+                    <label for="projectManager">项目经理</label>
+                    <input type="text" class="form-control" id="projectManager" value="{{ request.user.username }}" name="projectManager" disabled>
+                  </div>
+                  <div class="col-md-6 margin-bottom-15">
+                  </div>
+                </div>
+                <div class="row">
+                <div class="col-md-6 margin-bottom-15">
+                  <label for="projectType">项目类型</label>
+                  <select class="form-control margin-bottom-15" id="projectType" name="projectType">
+                    <option>金融产品</option>
+                    <option>电信产品</option>
+                    <option>物联网产品</option>
+                  </select>
+                  <label for="projectStuffs">选择人员</label>
+                  <select multiple class="form-control" id="projectStuffs" name="projectStuffs">
+                      {% for user in all_users %}
+                          <option>{{ user.username }}</option>
+                      {% endfor %}
+                  </select>
+                </div>
+              </div>
+                <div class="row">
+                  <div class="col-md-12 margin-bottom-15">
+                      <label for="projectDetail">项目简述</label>
+                      <textarea class="form-control" rows="3" id="projectDetail" name="projectDetail"></textarea>
+                  </div>
+              </div>
+                <div class="row">
+                <div class="col-md-12 margin-bottom-30">
+                  <label for="exampleInputFile">File input</label>
+                  <input type="file" id="exampleInputFile">
+                  <p class="help-block">You can upload file here.</p>
+                </div>
+              </div>
+                <div class="row templatemo-form-buttons">
+                <div class="col-md-12">
+                  <button type="submit" class="btn btn-primary">提交</button>
+                  <button type="reset" class="btn btn-default">清空</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        </div>
+{% endblock %}
